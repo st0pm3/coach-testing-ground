@@ -4,10 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  wintrchess: link:../PeterGriffin
-  PeterGriffin: link:PeterGriffin
-
 importers:
 
   .:
@@ -35,7 +31,7 @@ importers:
         version: 5.1.34
       openai:
         specifier: ^6.23.0
-        version: 6.23.0(ws@8.19.0)
+        version: 6.23.0(ws@8.19.0)(zod@4.3.6)
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -49,8 +45,8 @@ importers:
         specifier: ^7.13.0
         version: 7.13.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       wintrchess:
-        specifier: link:../../PeterGriffin
-        version: link:../../PeterGriffin
+        specifier: ^1.0.1
+        version: 1.0.1(openai@6.23.0(ws@8.19.0)(zod@4.3.6))
     devDependencies:
       '@react-router/dev':
         specifier: ^7.13.0
@@ -467,6 +463,9 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
+
+  '@openrouter/sdk@0.9.11':
+    resolution: {integrity: sha512-BgFu6NcIJO4a9aVjr04y3kZ8pyM71j15I+bzfVAGEvxnj+KQNIkBYQGgwrG3D+aT1QpDKLki8btcQmpaxUas6A==}
 
   '@react-router/dev@7.13.0':
     resolution: {integrity: sha512-0vRfTrS6wIXr9j0STu614Cv2ytMr21evnv1r+DXPv5cJ4q0V2x2kBAXC8TAqEXkpN5vdhbXBlbGQ821zwOfhvg==}
@@ -1491,6 +1490,11 @@ packages:
       yaml:
         optional: true
 
+  wintrchess@1.0.1:
+    resolution: {integrity: sha512-Jpm53J0Z/mnoU1xyesMvUMFINUwMveAk3YTr5HcjCdhMitZ9Zpg7iJJGiOqJRyR1o/VAaFwyD8h8KG+XwcAobg==}
+    peerDependencies:
+      openai: ^6.17.0
+
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
@@ -1508,6 +1512,9 @@ packages:
 
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
+
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
 
 snapshots:
 
@@ -1879,6 +1886,10 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
+
+  '@openrouter/sdk@0.9.11':
+    dependencies:
+      zod: 4.3.6
 
   '@react-router/dev@7.13.0(@types/node@25.2.0)(react-router@7.13.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.0))':
     dependencies:
@@ -2470,9 +2481,10 @@ snapshots:
     dependencies:
       wrappy: 1.0.2
 
-  openai@6.23.0(ws@8.19.0):
+  openai@6.23.0(ws@8.19.0)(zod@4.3.6):
     optionalDependencies:
       ws: 8.19.0
+      zod: 4.3.6
 
   p-map@7.0.4: {}
 
@@ -2855,9 +2867,17 @@ snapshots:
       '@types/node': 25.2.0
       fsevents: 2.3.3
 
+  wintrchess@1.0.1(openai@6.23.0(ws@8.19.0)(zod@4.3.6)):
+    dependencies:
+      '@openrouter/sdk': 0.9.11
+      chessops: 0.15.0
+      openai: 6.23.0(ws@8.19.0)(zod@4.3.6)
+
   wrappy@1.0.2: {}
 
   ws@8.19.0:
     optional: true
 
   yallist@3.1.1: {}
+
+  zod@4.3.6: {}

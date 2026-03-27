@@ -23,6 +23,6 @@
     "react-chessboard": "^5.10.0",
     "react-dom": "^19.2.4",
     "react-router": "^7.13.0",
-    "wintrchess": "link:..\\..\\PeterGriffin"
+    "wintrchess": "^1.0.1"
   }
 }

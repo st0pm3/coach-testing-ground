@@ -2,9 +2,6 @@
 
 Use this to test the coach. This is a bit of a duct taped website, so you will have to edit `client/src/pages/Home/index.tsx` if you would like to change things around to your liking.
 
-> [!IMPORTANT]
-> You need to edit `client/package.json` so that the `wintrchess` library points to your local copy! I haven't published it to NPM yet. I guess I should probably do that.
-
 ### Tech Stack
 
 - pnpm
