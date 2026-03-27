@@ -1,0 +1,48 @@
+.wrapper {
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+.boardCard {
+    flex-shrink: 0;
+    width: min(700px, 100%);
+}
+
+.analysisCard {
+    max-width: 500px;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+@media (max-width: 1150px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .analysisCard {
+        max-width: unset;
+        width: min(700px, 100%);
+    }
+}
+
+.coachIcon {
+    width: 25%;
+}
+
+.speechBubble {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.promptArea {
+    background-color: #333333;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+    height: 200px;
+}

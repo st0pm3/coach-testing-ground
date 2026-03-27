@@ -1,0 +1,7 @@
+packages:
+  - ./client
+  - ./server
+
+overrides:
+  PeterGriffin: link:PeterGriffin
+  wintrchess: link:../PeterGriffin

@@ -1,0 +1,14 @@
+.highlight {
+    padding: 0 5px 3px 5px;
+    margin-bottom: -2px;
+
+    border-radius: 5px;
+    background-color: #e5e5e5;
+    box-shadow: inset 0 -0.2rem 0 0 #c7c7c7;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.highlight:hover {
+    filter: brightness(0.9);
+}

@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"dev": "pnpm -F client dev",
+		"build": "pnpm -F * build",
+		"start": "pnpm -F server start"
+	},
+	"devDependencies": {
+		"typescript": "^5.9.3"
+	}
+}
